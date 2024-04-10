@@ -46,7 +46,7 @@ class Trainer(models.Model):
 
 class MembershipPlan(models.Model):
     plan=models.CharField(max_length=185)
-    price=models.IntegerField(max_length=55)
+    price=models.IntegerField()
 
     def __int__(self):
         return self.id    
