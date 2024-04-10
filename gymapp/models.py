@@ -25,7 +25,7 @@ class Enrollment(models.Model):
     Reference=models.CharField(max_length=55)
     Address=models.TextField()
     paymentStatus=models.CharField(max_length=55,blank=True,null=True)
-    Price=models.IntegerField(max_length=55,blank=True,null=True)
+    Price=models.IntegerField(blank=True,null=True)
     DueDate=models.DateTimeField(blank=True,null=True)
     timeStamp=models.DateTimeField(auto_now_add=True,blank=True,)
 
@@ -38,7 +38,7 @@ class Trainer(models.Model):
     name=models.CharField(max_length=55)
     gender=models.CharField(max_length=25)
     phone=models.CharField(max_length=25)
-    salary=models.IntegerField(max_length=25)
+    salary=models.IntegerField()
     timeStamp=models.DateTimeField(auto_now_add=True,blank=True)
     def __str__(self):
         return self.name
